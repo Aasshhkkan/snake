@@ -1,0 +1,64 @@
+html{
+    --backgroundColor: #90c45c;
+    --mainColor: #2a371b;
+    --blockSize: 20px;
+    --sectionWide:700px;
+    --sectionHeight:500px;
+    height: 100%;
+}
+body{
+    background: var(--backgroundColor);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#board{
+    width: var(--sectionWide);
+    height: var(--sectionHeight);
+    border: 5px solid var(--mainColor);
+    position: relative;
+}
+.snake {
+    width: var(--blockSize);
+    height: var(--blockSize);
+    background: var(--mainColor);
+    position: absolute;
+}
+/* .Part1{
+    left: 40px;
+    top: 20px;
+}
+.Part2{
+    left: 60px;
+    top: 20px;
+}
+.Part3{
+    left: 80px;
+    top: 20px;
+}
+.Part4{
+    left: 80px;
+    top: 40px;
+} */
+.goal{
+    position: absolute;
+    left: 160px;
+    top: 100px;
+    width: var(--blockSize);
+    height: var(--blockSize);
+}
+.goal::after{
+    position: absolute;
+    content: "*";
+    color: var(--backgroundColor); 
+    text-align: center;
+    background: var(--mainColor);
+    border-radius: 50%/80%;
+    left: 10%;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+    display: block;
+}
